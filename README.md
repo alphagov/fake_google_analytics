@@ -10,7 +10,7 @@ HTTP interface. (an entry in /etc/hosts is added)
 
 Run:
 
-  rvmsudo bundle install
+    rvmsudo bundle install
 
 'sudo' is necessary as adding an entry to the hosts file require root 
 privileges.
