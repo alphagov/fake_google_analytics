@@ -1,12 +1,18 @@
 GA_REQUESTS_FILE = "#{File.dirname(__FILE__)}/db/requests.yml"
+require 'ptools'
+
+def sudo
+	@sudo ||= File.which('rvmsudo') or File.which('sudo') or ''
+end
+
 namespace :fake_ga do
   desc "Start fake Google Analytics web server"
   task :start do
     begin
-      `rvmsudo ghost add www.google-analytics.com 127.0.0.1`
-      `rvmsudo bundle exec rackup --port 80`
+      `#{sudo} ghost add www.google-analytics.com 127.0.0.1`
+      `#{sudo} bundle exec rackup --port 80`
     ensure
-      `rvmsudo ghost delete www.google-analytics.com`
+      `#{sudo} ghost delete www.google-analytics.com`
     end
   end
 
