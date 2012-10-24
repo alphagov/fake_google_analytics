@@ -1,6 +1,6 @@
 ## About
 
-Google Analytics (GA) proxy is a tool used to shorten the feedback loop
+Fake Google Analytics (GA)  is a tool used to shorten the feedback loop
 when testing the interaction of a website with Google Analytics.
 It does so by redirecting all traffic to www.google-analytics.com to the
 web server run locally, storing it in the file, and exposing via simple
@@ -19,11 +19,11 @@ privileges.
 
 In order to start intercepting all GA traffic execute:
 
-    bundle exec rake ga_proxy:run
+    bundle exec rake fake_ga:run
 
 In order to clear the file containg all intercepted GA requests execute:
 
-    bundle exec rake ga_proxy:clear
+    bundle exec rake fake_ga:clear
 
 ## Accessing GA data
 

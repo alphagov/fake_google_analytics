@@ -1,6 +1,6 @@
 GA_REQUESTS_FILE = "#{File.dirname(__FILE__)}/db/requests.yml"
-namespace :ga_proxy do
-  desc "Start Google Analytics proxy web server"
+namespace :fake_ga do
+  desc "Start fake Google Analytics web server"
   task :start do
     begin
       `rvmsudo ghost add www.google-analytics.com 127.0.0.1`
