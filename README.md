@@ -44,3 +44,7 @@ This tool works by adding a custom entry to the hosts file. When this tool
 is running all traffic that goes to www.google-analytics.com is going to be
 "intercepted" and logged instead of going to GA.
 
+## License
+
+Fake Google Analytics is released under the MIT license, a copy of which can be found
+in ``LICENSE``.
