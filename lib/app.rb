@@ -51,6 +51,8 @@ get '/events' do
   }.map { |request|
     request['utme'] =~ /5\((.*)\*(.*)\*(.*)\)8\(.*\)9\(.*\)/
     {:format => $1, :event => $3, :slug => $2, :time => request['timestamp']}
+  }.reject { |event|
+    event[:slug].nil?
   }.to_json
 end
 
