@@ -49,7 +49,7 @@ get '/events' do
   GA_REQUESTS.select { |requests|
     requests['utmt'] == 'event'
   }.map { |request|
-    request['utme'] =~ /5\((.*)\*(.*)\*(.*)\)8\(.*\)9\(.*\)/
+    request['utme'] =~ /5\((.*?)\*(.*?)\*(.*?)\)/
     {:format => $1, :event => $3, :slug => $2, :time => request['timestamp']}
   }.reject { |event|
     event[:slug].nil?
