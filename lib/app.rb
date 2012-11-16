@@ -50,7 +50,7 @@ get '/events' do
     requests['utmt'] == 'event'
   }.map { |request|
     request['utme'] =~ /5\((.*)\*(.*)\*(.*)\)8\(.*\)9\(.*\)/
-    {:format => $1, :event => $3, :need_id => $2, :time => request['timestamp']}
+    {:format => $1, :event => $3, :slug => $2, :time => request['timestamp']}
   }.to_json
 end
 
