@@ -48,3 +48,5 @@ is running all traffic that goes to www.google-analytics.com is going to be
 
 Fake Google Analytics is released under the MIT license, a copy of which can be found
 in ``LICENSE``.
+
+The public/ga/ folder contains code snippets from google see: "https://developers.google.com/analytics/devguides/collection/gajs/methods/"
